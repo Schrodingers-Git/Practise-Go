@@ -1,0 +1,71 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	fmt.Println("HI",math.Sqrt(16))
+	var i int
+	i=20
+
+	switch x:=10; {
+	case x<=10:
+		fmt.Println("A")
+	default:
+		fmt.Println("Def")
+	}
+
+		if i==0{
+		defer fmt.Println("yes")
+	}else{
+		defer	fmt.Println("No")
+	}
+	for ;i>=0;i--{
+		defer fmt.Println(i)
+	}
+	g:=[]struct{
+		i int
+		j int
+	}{
+		{1,2},
+		{2,3},{132,123},
+	}
+	k:=[] int {1,2,23,4,24,1,1}
+	k=k[:0]
+	fmt.Println(k)
+	k=k[:5]
+	fmt.Println(k)
+
+	fmt.Println(g)
+
+
+	//map 
+	m := make(map[string]int)
+	m["asd"]=123
+
+	j:= map[string]int{}
+
+	j["sdf"]=1
+	fmt.Println(j["sdf"])	
+	fmt.Println(m["asd"])
+	
+
+	//NOTE:
+	// interfaces in go are implicitly satisfied
+	//i.e 
+	// in other lang ->  we do  something implements interfaces but in go it is auto interpreted 
+	//                   as long as the type satisfies the methonds in the interface.
+	// EG:
+	//  interface {
+	//		method 1 
+	//  }
+	// 
+	//	type 1 {method 1},type 2{method 1,method 2}
+	// 
+	// type 1 can be accepted with the interface but not the type 2 as type 1 satisfies all the methods of the interface
+	// https://www.youtube.com/watch?v=tgGNwG_UxFo&list=PLVUjnVsjlZT0yVHRVLEztrDBO0kLlYNBa&index=2&t=14534s.
+
+
+}
